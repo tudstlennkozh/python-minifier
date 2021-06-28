@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Package Reference &mdash; Python Minifier 2.4.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transforms" href="transforms/index.html" />
+    <link rel="prev" title="Command Usage" href="command_usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python Minifier
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_usage.html">Command Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Package Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms/index.html">Transforms</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python Minifier</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Package Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api_usage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-python_minifier">
+<span id="package-reference"></span><h1>Package Reference<a class="headerlink" href="#module-python_minifier" title="Permalink to this headline">¶</a></h1>
+<p>This package transforms python source code strings or ast.Module Nodes into
+a ‘minified’ representation of the same source code.</p>
+<dl class="function">
+<dt id="python_minifier.minify">
+<code class="descclassname">python_minifier.</code><code class="descname">minify</code><span class="sig-paren">(</span><em>source</em>, <em>filename=None</em>, <em>remove_annotations=True</em>, <em>remove_pass=True</em>, <em>remove_literal_statements=False</em>, <em>combine_imports=True</em>, <em>hoist_literals=True</em>, <em>rename_locals=True</em>, <em>preserve_locals=None</em>, <em>rename_globals=False</em>, <em>preserve_globals=None</em>, <em>remove_object_base=True</em>, <em>convert_posargs_to_args=True</em><span class="sig-paren">)</span><a class="headerlink" href="#python_minifier.minify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minify a python module</p>
+<p>The module is transformed according the the arguments.
+If all transformation arguments are False, no transformations are made to the AST, the returned string will
+parse into exactly the same module.</p>
+<p>Using the default arguments only transformations that are always or almost always safe are enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The python module source code</p></li>
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The original source filename if known</p></li>
+<li><p><strong>remove_annotations</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If type annotations should be removed where possible</p></li>
+<li><p><strong>remove_pass</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If Pass statements should be removed where possible</p></li>
+<li><p><strong>remove_literal_statements</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If statements consisting of a single literal should be removed, including docstrings</p></li>
+<li><p><strong>combine_imports</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Combine adjacent import statements where possible</p></li>
+<li><p><strong>hoist_literals</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If str and byte literals may be hoisted to the module level where possible.</p></li>
+<li><p><strong>rename_locals</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If local names may be shortened</p></li>
+<li><p><strong>preserve_locals</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>]</em>) – Locals names to leave unchanged when rename_locals is True</p></li>
+<li><p><strong>rename_globals</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If global names may be shortened</p></li>
+<li><p><strong>preserve_globals</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>]</em>) – Global names to leave unchanged when rename_globals is True</p></li>
+<li><p><strong>remove_object_base</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If object as a base class may be removed</p></li>
+<li><p><strong>convert_posargs_to_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If positional-only arguments will be converted to normal arguments</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="python_minifier.awslambda">
+<code class="descclassname">python_minifier.</code><code class="descname">awslambda</code><span class="sig-paren">(</span><em>source</em>, <em>filename=None</em>, <em>entrypoint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#python_minifier.awslambda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minify a python module for use as an AWS Lambda function</p>
+<p>This returns a string suitable for embedding in a cloudformation template.
+When minifying, all transformations are enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The python module source code</p></li>
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The original source filename if known</p></li>
+<li><p><strong>entrypoint</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><em>NoneType</em>) – The lambda entrypoint function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="python_minifier.unparse">
+<code class="descclassname">python_minifier.</code><code class="descname">unparse</code><span class="sig-paren">(</span><em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#python_minifier.unparse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn a module AST into python code</p>
+<p>This returns an exact representation of the given module,
+such that it can be parsed back into the same AST.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>module</strong> – The module to turn into python code</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>module: <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.Module</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="python_minifier.UnstableMinification">
+<em class="property">exception </em><code class="descclassname">python_minifier.</code><code class="descname">UnstableMinification</code><span class="sig-paren">(</span><em>exception</em>, <em>source</em>, <em>minified</em><span class="sig-paren">)</span><a class="headerlink" href="#python_minifier.UnstableMinification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when a minified module differs from the original module in an unexpected way.</p>
+<p>This is raised when the minifier generates source code that doesn’t parse back into the
+original module (after known transformations).
+This should never occur and is a bug.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transforms/index.html" class="btn btn-neutral float-right" title="Transforms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="command_usage.html" class="btn btn-neutral float-left" title="Command Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Daniel Flook
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

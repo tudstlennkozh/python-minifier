@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Usage &mdash; Python Minifier 2.4.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Package Reference" href="api_usage.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python Minifier
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_usage.html">Package Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transforms/index.html">Transforms</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python Minifier</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Command Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/command_usage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="command-usage">
+<h1>Command Usage<a class="headerlink" href="#command-usage" title="Permalink to this headline">¶</a></h1>
+<p>The pyminify command is installed with this package.
+It can be used to minify python files, and outputs the result to stdout.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: pyminify [-h] [--no-combine-imports] [--no-remove-pass]
+                [--remove-literal-statements] [--no-remove-annotations]
+                [--no-hoist-literals] [--no-rename-locals]
+                [--preserve-locals PRESERVE_LOCALS] [--rename-globals]
+                [--preserve-globals PRESERVE_GLOBALS]
+                [--no-remove-object-base] [--no-convert-posargs-to-args] [-v]
+                path
+
+Minify Python source
+
+positional arguments:
+  path                  The source file to minify. Use &quot;-&quot; to read from stdin
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --no-combine-imports  Disable combining adjacent import statements
+  --no-remove-pass      Disable removing Pass statements
+  --remove-literal-statements
+                        Enable removing statements that are just a literal
+                        (including docstrings)
+  --no-remove-annotations
+                        Disable removing function and variable annotations
+  --no-hoist-literals   Disable replacing string and bytes literals with
+                        variables
+  --no-rename-locals    Disable shortening of local names
+  --preserve-locals PRESERVE_LOCALS
+                        Comma separated list of local names that will not be
+                        shortened
+  --rename-globals      Enable shortening of global names
+  --preserve-globals PRESERVE_GLOBALS
+                        Comma separated list of global names that will not be
+                        shortened
+  --no-remove-object-base
+                        Disable removing object from base class list
+  --no-convert-posargs-to-args
+                        Disable converting positional only arguments to normal
+                        arguments
+  -v, --version         show program&#39;s version number and exit
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api_usage.html" class="btn btn-neutral float-right" title="Package Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Daniel Flook
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
