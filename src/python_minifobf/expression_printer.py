@@ -1,7 +1,7 @@
 import ast
 import sys
 
-from python_minifier.util import is_ast_node
+from python_minifobf.util import is_ast_node
 
 
 class ExpressionPrinter(object):
@@ -792,10 +792,10 @@ class ExpressionPrinter(object):
     def visit_JoinedStr(self, node):
         assert isinstance(node, ast.JoinedStr)
 
-        import python_minifier.f_string
+        import python_minifobf.f_string
 
         self.token_break()
-        self.code += str(python_minifier.f_string.OuterFString(node))
+        self.code += str(python_minifobf.f_string.OuterFString(node))
 
     def visit_NamedExpr(self, node):
         self._expression(node.target)

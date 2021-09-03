@@ -2,8 +2,8 @@ import ast
 import pytest
 import sys
 
-from python_minifier.transforms.remove_object_base import RemoveObject
-from python_minifier.ast_compare import compare_ast
+from python_minifobf.transforms.remove_object_base import RemoveObject
+from python_minifobf.ast_compare import compare_ast
 
 
 def test_remove_object_py3():

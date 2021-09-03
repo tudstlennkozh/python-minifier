@@ -3,7 +3,7 @@ import keyword
 import random
 import string
 
-from python_minifier.rename.util import builtins
+from python_minifobf.rename.util import builtins
 
 
 def random_generator(length=40):

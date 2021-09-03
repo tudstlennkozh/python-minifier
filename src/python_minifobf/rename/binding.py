@@ -1,7 +1,7 @@
 import ast
 
-from python_minifier.rename.util import arg_rename_in_place, insert
-from python_minifier.util import is_ast_node
+from python_minifobf.rename.util import arg_rename_in_place, insert
+from python_minifobf.util import is_ast_node
 
 
 class Binding(object):

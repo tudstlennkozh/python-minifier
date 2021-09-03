@@ -5,10 +5,10 @@ import sys
 import argparse
 from pkg_resources import get_distribution, DistributionNotFound
 
-from python_minifier import minify
+from python_minifobf import minify
 
 try:
-    version = get_distribution('python_minifier').version
+    version = get_distribution('python_minifobf').version
 except DistributionNotFound:
     version = '0.0.0'
 

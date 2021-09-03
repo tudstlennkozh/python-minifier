@@ -1,7 +1,7 @@
 import ast
 
-from python_minifier.transforms.suite_transformer import SuiteTransformer
-from python_minifier.util import is_ast_node
+from python_minifobf.transforms.suite_transformer import SuiteTransformer
+from python_minifobf.util import is_ast_node
 
 
 class RemovePass(SuiteTransformer):

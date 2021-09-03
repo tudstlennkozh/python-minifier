@@ -1,7 +1,7 @@
 import ast
 import sys
 
-from python_minifier.transforms.suite_transformer import SuiteTransformer
+from python_minifobf.transforms.suite_transformer import SuiteTransformer
 
 
 class RemoveObject(SuiteTransformer):

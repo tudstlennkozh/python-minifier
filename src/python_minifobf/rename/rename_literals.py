@@ -1,9 +1,9 @@
 import ast
 
-from python_minifier.rename.binding import Binding
-from python_minifier.rename.util import insert
-from python_minifier.transforms.suite_transformer import NodeVisitor
-from python_minifier.util import is_ast_node
+from python_minifobf.rename.binding import Binding
+from python_minifobf.rename.util import insert
+from python_minifobf.transforms.suite_transformer import NodeVisitor
+from python_minifobf.util import is_ast_node
 
 
 def replace(old_node, new_node):

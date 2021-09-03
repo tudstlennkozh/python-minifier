@@ -4,8 +4,8 @@ For each node in an AST set the namespace to use for name binding and resolution
 
 import ast
 
-from python_minifier.rename.util import is_namespace
-from python_minifier.util import is_ast_node
+from python_minifobf.rename.util import is_namespace
+from python_minifobf.util import is_ast_node
 
 
 def add_parent_to_arguments(arguments, func):

@@ -1,6 +1,6 @@
 import itertools
 
-from python_minifier.rename.name_generator import name_filter
+from python_minifobf.rename.name_generator import name_filter
 
 def test_name_generator():
 

@@ -103,7 +103,7 @@ than 4KiB. I wrote this package so I could write python normally and still embed
 To install python-minifier use pip:
 
 ```bash
-$ pip install python-minifier
+$ pip install python-minifobf
 ```
 
 Note that python-minifier depends on the python interpreter for parsing source code, 
@@ -122,10 +122,10 @@ $ pyminify hello.py
 There is also an API. The same example would look like:
 
 ```python
-import python_minifier
+import python_minifobf
 
 with open('hello.py') as f:
-    print(python_minifier.minify(f.read()))
+    print(python_minifobf.minify(f.read()))
 ```
 
 Documentation is available at [dflook.github.io/python-minifier/](https://dflook.github.io/python-minifier/)

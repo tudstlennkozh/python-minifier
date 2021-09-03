@@ -2,9 +2,9 @@ import ast
 import sys
 import pytest
 
-from python_minifier import add_namespace
-from python_minifier.transforms.remove_annotations import RemoveAnnotations
-from python_minifier.ast_compare import compare_ast
+from python_minifobf import add_namespace
+from python_minifobf.transforms.remove_annotations import RemoveAnnotations
+from python_minifobf.ast_compare import compare_ast
 
 def remove_annotations(source):
     module = ast.parse(source)

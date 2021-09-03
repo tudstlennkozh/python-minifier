@@ -1,8 +1,8 @@
 import ast
 
-from python_minifier.rename.binding import BuiltinBinding, NameBinding
-from python_minifier.rename.util import get_global_namespace, get_nonlocal_namespace, builtins
-from python_minifier.util import is_ast_node
+from python_minifobf.rename.binding import BuiltinBinding, NameBinding
+from python_minifobf.rename.util import get_global_namespace, get_nonlocal_namespace, builtins
+from python_minifobf.util import is_ast_node
 
 
 def get_binding(name, namespace):

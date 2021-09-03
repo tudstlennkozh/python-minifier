@@ -1,8 +1,8 @@
 import ast
 
-from python_minifier.rename.binding import NameBinding
-from python_minifier.rename.name_generator import name_filter
-from python_minifier.rename.util import is_namespace
+from python_minifobf.rename.binding import NameBinding
+from python_minifobf.rename.name_generator import name_filter
+from python_minifobf.rename.util import is_namespace
 
 
 def all_bindings(node):

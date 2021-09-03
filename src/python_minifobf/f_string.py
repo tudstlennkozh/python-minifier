@@ -9,12 +9,12 @@ Mostly because FStrings feel like a hack.
 import ast
 import copy
 
-from python_minifier import UnstableMinification
-from python_minifier.ast_compare import CompareError
-from python_minifier.ast_compare import compare_ast
-from python_minifier.expression_printer import ExpressionPrinter
-from python_minifier.ministring import MiniString
-from python_minifier.util import is_ast_node
+from python_minifobf import UnstableMinification
+from python_minifobf.ast_compare import CompareError
+from python_minifobf.ast_compare import compare_ast
+from python_minifobf.expression_printer import ExpressionPrinter
+from python_minifobf.ministring import MiniString
+from python_minifobf.util import is_ast_node
 
 
 class FString(object):
@@ -89,7 +89,7 @@ class OuterFString(FString):
         for candidate in candidates:
 
             try:
-                minified_f_string = ast.parse(candidate, 'python_minifier.f_string output', mode='eval').body
+                minified_f_string = ast.parse(candidate, 'python_minifobf.f_string output', mode='eval').body
             except SyntaxError as syntax_error:
                 raise UnstableMinification(syntax_error, '', candidate)
 

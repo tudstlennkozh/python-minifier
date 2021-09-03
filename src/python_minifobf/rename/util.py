@@ -1,7 +1,7 @@
 import ast
 import sys
 
-from python_minifier.util import is_ast_node
+from python_minifobf.util import is_ast_node
 
 
 def create_is_namespace():

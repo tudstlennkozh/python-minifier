@@ -6,9 +6,9 @@ a 'minified' representation of the same source code.
 
 import ast
 
-from python_minifier.ast_compare import CompareError, compare_ast
-from python_minifier.module_printer import ModulePrinter
-from python_minifier.rename import (
+from python_minifobf.ast_compare import CompareError, compare_ast
+from python_minifobf.module_printer import ModulePrinter
+from python_minifobf.rename import (
     rename_literals,
     bind_names,
     resolve_names,
@@ -17,12 +17,12 @@ from python_minifier.rename import (
     allow_rename_locals,
     add_namespace,
 )
-from python_minifier.transforms.combine_imports import CombineImports
-from python_minifier.transforms.remove_annotations import RemoveAnnotations
-from python_minifier.transforms.remove_literal_statements import RemoveLiteralStatements
-from python_minifier.transforms.remove_object_base import RemoveObject
-from python_minifier.transforms.remove_pass import RemovePass
-from python_minifier.transforms.remove_posargs import remove_posargs
+from python_minifobf.transforms.combine_imports import CombineImports
+from python_minifobf.transforms.remove_annotations import RemoveAnnotations
+from python_minifobf.transforms.remove_literal_statements import RemoveLiteralStatements
+from python_minifobf.transforms.remove_object_base import RemoveObject
+from python_minifobf.transforms.remove_pass import RemovePass
+from python_minifobf.transforms.remove_posargs import remove_posargs
 
 
 class UnstableMinification(RuntimeError):
@@ -89,7 +89,7 @@ def minify(
 
     """
 
-    filename = filename or 'python_minifier.minify source'
+    filename = filename or 'python_minifobf.minify source'
 
     # This will raise if the source file can't be parsed
     module = ast.parse(source, filename)
@@ -151,7 +151,7 @@ def unparse(module):
     printer(module)
 
     try:
-        minified_module = ast.parse(printer.code, 'python_minifier.unparse output')
+        minified_module = ast.parse(printer.code, 'python_minifobf.unparse output')
     except SyntaxError as syntax_error:
         raise UnstableMinification(syntax_error, '', printer.code)
 

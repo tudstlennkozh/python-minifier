@@ -6,7 +6,7 @@ with open(readme_path) as f:
     long_desc = f.read()
 
 setup(
-    name='python_minifier',
+    name='python_minifobf',
     description='Transform Python source code into it\'s most compact representation',
     author='Daniel Flook',
     author_email='daniel@flook.org',
@@ -49,7 +49,7 @@ setup(
     ],
 
     entry_points = {
-        'console_scripts': ['pyminify=python_minifier.__main__:main']
+        'console_scripts': ['pyminify=python_minifobf.__main__:main']
     },
 
     zip_safe=True

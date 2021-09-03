@@ -3,9 +3,9 @@ import sys
 
 import pytest
 
-from python_minifier import unparse
-from python_minifier.ast_compare import compare_ast
-from python_minifier.rename import add_namespace, bind_names, resolve_names, rename, rename_literals, allow_rename_locals, allow_rename_globals
+from python_minifobf import unparse
+from python_minifobf.ast_compare import compare_ast
+from python_minifobf.rename import add_namespace, bind_names, resolve_names, rename, rename_literals, allow_rename_locals, allow_rename_globals
 
 def hoist(source):
     module = ast.parse(source)

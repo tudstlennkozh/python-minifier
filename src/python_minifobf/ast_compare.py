@@ -1,6 +1,6 @@
 import ast
 
-from python_minifier.util import is_ast_node
+from python_minifobf.util import is_ast_node
 
 
 class CompareError(RuntimeError):

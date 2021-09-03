@@ -1,9 +1,9 @@
 import ast
 import sys
 import pytest
-from python_minifier import unparse
-from python_minifier.ast_compare import compare_ast
-from python_minifier.transforms.remove_posargs import remove_posargs
+from python_minifobf import unparse
+from python_minifobf.ast_compare import compare_ast
+from python_minifobf.transforms.remove_posargs import remove_posargs
 
 def test_pep():
     if sys.version_info < (3, 8):

@@ -1,8 +1,8 @@
 import ast
 
-from python_minifier import add_namespace
-from python_minifier.transforms.combine_imports import CombineImports
-from python_minifier.ast_compare import compare_ast
+from python_minifobf import add_namespace
+from python_minifobf.transforms.combine_imports import CombineImports
+from python_minifobf.ast_compare import compare_ast
 
 def combine_imports(module):
     add_namespace(module)

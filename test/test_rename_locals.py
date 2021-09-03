@@ -9,7 +9,7 @@ import sys
 
 import pytest
 
-from python_minifier import add_namespace, bind_names, resolve_names, allow_rename_locals, allow_rename_globals, \
+from python_minifobf import add_namespace, bind_names, resolve_names, allow_rename_locals, allow_rename_globals, \
     compare_ast, rename, CompareError, unparse
 
 
