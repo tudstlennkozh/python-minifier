@@ -1,9 +1,6 @@
 tox
 virtualenv
 pytest
-sphinx
-sphinxcontrib-programoutput
-sphinx_rtd_theme
 pyyaml
 sh
 hypothesis
